@@ -53,9 +53,7 @@ app.get('/help/*', (req, res) => {
         errorMessage: 'Help article not found.'
     })
 })
-//404 handler means match anything that hasn't been matched before 
-//app.get needs to come last, it looks for match then continues looking 
-//you can use a generic 404 page or customize it
+
 app.get('*', (req, res) => {
     res.render('404', {
         title: '404',
@@ -63,11 +61,6 @@ app.get('*', (req, res) => {
         errorMessage: 'Page not found.'
     })
 })
-// generic 404 handler
-// app.get('*',(req, res) => {
-//     res.send('My 404 page')
-// })
-
 
 app.listen(3000, () => {
     console.log('Server is up on port 3000.')
