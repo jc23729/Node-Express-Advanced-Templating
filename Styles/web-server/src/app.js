@@ -65,13 +65,39 @@ app.get('*', (req, res) => {
 
 //Goal Create and render a 404 page with handlebars 
 
-// 1 setup the template to render an error message in a paragraph
+// 1 setup the template to render the header and footer
+
+//views/404.hbs
+// //<!DOCTYPE html>
+
+// <html>
+
+// <head>
+//     <link rel="stylesheet" href="/css/styles.css">
+// </head>
+
+// <body>
+//     {{>header}}
+//     <p>{{errorMessage}}</p>     // this 
+//     {{>footer}}
+// </body>
+
+// </html>
+
 // 2 Setup the template to render an error message in a paragraph
-// 3 Render the template for both 404 routes and   
+
+// errorMessage: 'Page not found.'3 Render the template for both 404 routes and   
 //         page not found error
 //         Help article not found
 //         Test your work. Vistit /what and /help/units
 
+// app.get('*', (req, res) => {
+//     res.render('404', {
+//         title: '404',
+//         name: 'Andrew Mead',
+//         errorMessage: 'Page not found.'
+//     })
+// })
 
 
 app.listen(3000, () => {
