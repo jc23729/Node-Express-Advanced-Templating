@@ -53,7 +53,7 @@ app.get('/help/*', (req, res) => {
         errorMessage: 'Help article not found.'
     })
 })
-//404 handler 
+//404 handler means match anything that hasn't been matched before 
 app.get('*', (req, res) => {
     res.render('404', {
         title: '404',
